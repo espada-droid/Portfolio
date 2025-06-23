@@ -19,8 +19,8 @@ export default defineConfig({
         notFound: resolve(__dirname, 'index.html'),
       },
       output: {
-        entryFileNames: (assetInfo: any) => {
-          if (assetInfo.name === 'notFound') return '404.html';
+        entryFileNames: (assetInfo) => {
+          if ((assetInfo as { name: string }).name === 'notFound') return '404.html';
           return '[name].js';
         },
       },
