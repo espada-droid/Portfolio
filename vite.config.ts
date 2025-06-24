@@ -2,10 +2,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
-const isProduction = process.env.NODE_ENV === 'production';
-
 export default defineConfig({
-  base: isProduction ? '/Portfolio-Publish-Final/' : '/',
+  base: '/Portfolio/', // ✅ HARD-CODE THIS to your GitHub repo name
   plugins: [react()],
   resolve: {
     alias: {
